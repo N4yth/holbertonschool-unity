@@ -1,31 +1,55 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [Tooltip("Speed of the player")]
-    [SerializeField] 
-    private float speed = 5f;
-
-    [SerializeField] 
-    private float jumpForce = 6f;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float jumphigh = 3f;
 
     private Rigidbody rb;
+    public bool isGrounded;
 
+    void OnCollisionEnter(Collision collision)
+    {
+        isGrounded = true;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * speed;
-        rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
-        if (Input.GetButtonDown("Jump"))
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        Vector3 move = new Vector3(h, 0, v) * speed * Time.deltaTime;
+        transform.Translate(move, Space.World);
+
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+            rb.AddForce(new Vector3(0.0f, jumphigh, 0.0f) * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
+
+        if (FallingLimit())
+        {
+            transform.position = new Vector3(0, 40f, 0);
+        }
+    }
+
+    public bool FallingLimit()
+    {
+        if (rb.position.y < -25)
+        {
+            return true;
+        }
+        return false;
     }
 }
