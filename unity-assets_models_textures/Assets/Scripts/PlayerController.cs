@@ -30,7 +30,17 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        Vector3 move = new Vector3(h, 0, v) * speed * Time.deltaTime;
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        camForward.y = 0f;
+        camRight.y = 0f;
+
+        camForward.Normalize();
+        camRight.Normalize();
+
+        Vector3 move = (camForward * v + camRight * h) * speed * Time.deltaTime;
+
         transform.Translate(move, Space.World);
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
