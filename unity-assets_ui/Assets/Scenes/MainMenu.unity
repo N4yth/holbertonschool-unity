@@ -483,7 +483,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -493,8 +493,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -4928742352451709002, guid: c2514a27467778e42babc462d07dc20e, type: 3}
+    m_PressedSprite: {fileID: -3044749665540109536, guid: c2514a27467778e42babc462d07dc20e, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_text: LEVEL SELECT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3494e42139f59054cba1f6b46d3efc18, type: 2}
-  m_sharedMaterial: {fileID: -8266650176557252598, guid: 3494e42139f59054cba1f6b46d3efc18, type: 2}
+  m_sharedMaterial: {fileID: -485982806529436253, guid: 3494e42139f59054cba1f6b46d3efc18, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -964,7 +964,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -974,8 +974,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -1561580840248355024, guid: 5335e0fad804f6c49b649795e0172589, type: 3}
+    m_PressedSprite: {fileID: -2404911329485341581, guid: 5335e0fad804f6c49b649795e0172589, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1216,7 +1216,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1226,8 +1226,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -3843923788717299226, guid: 3becbb7ad5dd0bd44bf559142a0e44a6, type: 3}
+    m_PressedSprite: {fileID: 5809756550102309710, guid: 3becbb7ad5dd0bd44bf559142a0e44a6, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1473,6 +1473,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8032130769325107018, guid: da63ff20c72cc094eb167b8e8bfc1a30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
+    - target: {fileID: 8032130769325107018, guid: da63ff20c72cc094eb167b8e8bfc1a30, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3057623431077791603, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
+    - target: {fileID: 8032130769325107018, guid: da63ff20c72cc094eb167b8e8bfc1a30, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1486,6 +1498,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1282261624}
     m_Modifications:
+    - target: {fileID: 160221405497973306, guid: e6fdf16e79f2c0840a68f66fb7346391, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
+    - target: {fileID: 160221405497973306, guid: e6fdf16e79f2c0840a68f66fb7346391, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3057623431077791603, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
+    - target: {fileID: 160221405497973306, guid: e6fdf16e79f2c0840a68f66fb7346391, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3588800364586005359, guid: e6fdf16e79f2c0840a68f66fb7346391, type: 3}
       propertyPath: m_Name
       value: OptionsButton
