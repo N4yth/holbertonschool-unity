@@ -1628,7 +1628,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   BackButton: {fileID: 8408407917605657447}
   ApplyButton: {fileID: 4428075459204615701}
-  LevelButtons: []
+  isInvert: 0
+  toggleButton: {fileID: 1201506366}
 --- !u!1 &1430128379
 GameObject:
   m_ObjectHideFlags: 0

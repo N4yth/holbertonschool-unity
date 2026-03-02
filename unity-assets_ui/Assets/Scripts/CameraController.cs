@@ -18,14 +18,14 @@ public class CameraController : MonoBehaviour
     private float currentY = 0.0f;
     public float sensivity = 4.0f;
 
-    public bool isInverted = true;
+    public bool isInverted;
 
 
     void Start()
     {
-      
-
+      isInverted = PlayerPrefs.GetInt("isInvert", 0) == 1;
     }
+
     void LateUpdate()
     {
         if (Input.GetMouseButton(1))
