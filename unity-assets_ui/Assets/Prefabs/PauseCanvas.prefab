@@ -141,9 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Restart
-
-'
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
   m_sharedMaterial: {fileID: -3057623431077791603, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
@@ -401,9 +399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Menu
-
-'
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
   m_sharedMaterial: {fileID: -3057623431077791603, guid: b84fb5469d5a2ec489506d35b7c54a38, type: 2}
