@@ -2080,6 +2080,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6698134065927640777, guid: f66345d8d11a2b84284be43c8463e0bb, type: 3}
+--- !u!1 &674251455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3595618014701511828, guid: d5ade746eb54abd4685374e813300104, type: 3}
+  m_PrefabInstance: {fileID: 905641132869785290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680631026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 76c187112ea567d4996899425e861ba3, type: 3}
@@ -5137,6 +5142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WinTrigger
   TimerText: {fileID: 1059542001}
   script: {fileID: 389378895}
+  WinPanel: {fileID: 674251455}
 --- !u!1 &1645201550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9892933ce068cdb429dd78827126ec8c, type: 3}
@@ -6343,6 +6349,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2019727077396294910, guid: d5ade746eb54abd4685374e813300104, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1059542001}
     - target: {fileID: 3595618014701511828, guid: d5ade746eb54abd4685374e813300104, type: 3}
       propertyPath: m_Name
       value: WinCanvas

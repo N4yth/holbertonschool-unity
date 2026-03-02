@@ -6,16 +6,11 @@ public class WinTrigger : MonoBehaviour
 
     public Text TimerText;
     public Timer script;
-
-    void Start()
-    {
-        
-    }
+    public GameObject WinPanel;
 
     void OnTriggerEnter(Collider other)
     {
-        TimerText.color = Color.green;
-        TimerText.fontSize = 64;
         script.enabled = false;
+        WinPanel.gameObject.SetActive(true);
     }
 }

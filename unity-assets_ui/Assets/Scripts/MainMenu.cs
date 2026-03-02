@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour
     public Button OptionButton;
     public List<Button> LevelButtons;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         PlayerPrefs.SetInt("PreviouScene", 0);
