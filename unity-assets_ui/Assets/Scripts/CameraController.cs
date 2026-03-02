@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour
     private float currentY = 0.0f;
     public float sensivity = 4.0f;
 
+    public bool isInverted = true;
+
 
     void Start()
     {
@@ -29,9 +31,11 @@ public class CameraController : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             currentX += Input.GetAxis("Mouse X") * sensivity;
-            currentY -= Input.GetAxis("Mouse Y") * sensivity;
+            if (isInverted)
+                currentY += Input.GetAxis("Mouse Y") * sensivity;
+            else
+                currentY -= Input.GetAxis("Mouse Y") * sensivity;
         }
-
         currentY = Mathf.Clamp(currentY, YMin, YMax);
 
         Vector3 direction = new Vector3(0, 0, -distance);

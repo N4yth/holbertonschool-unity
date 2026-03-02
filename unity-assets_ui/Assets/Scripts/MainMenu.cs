@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("PreviouScene", 0);
-        PlayerPrefs.SetInt("ActualScene", 0);
         OptionButton.onClick.AddListener(Options);
         QuitButton.onClick.AddListener(QuitGame);
 
