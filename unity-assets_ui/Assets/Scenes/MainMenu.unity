@@ -1291,6 +1291,7 @@ GameObject:
   - component: {fileID: 2055166403}
   - component: {fileID: 2055166402}
   - component: {fileID: 2055166401}
+  - component: {fileID: 2055166405}
   m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -1381,6 +1382,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2055166405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055166400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335f44424ca4604498b9d892d5add847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  QuitButton: {fileID: 8808249690739349939}
+  OptionButton: {fileID: 9141886856256875593}
+  LevelButtons:
+  - {fileID: 706795022}
+  - {fileID: 1716634310}
+  - {fileID: 2001373050}
 --- !u!1001 &8808249690739349938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1490,6 +1509,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da63ff20c72cc094eb167b8e8bfc1a30, type: 3}
+--- !u!114 &8808249690739349939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6334166974589454889, guid: da63ff20c72cc094eb167b8e8bfc1a30, type: 3}
+  m_PrefabInstance: {fileID: 8808249690739349938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &9141886856256875592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1599,6 +1629,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6fdf16e79f2c0840a68f66fb7346391, type: 3}
+--- !u!114 &9141886856256875593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5345988812962658894, guid: e6fdf16e79f2c0840a68f66fb7346391, type: 3}
+  m_PrefabInstance: {fileID: 9141886856256875592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
