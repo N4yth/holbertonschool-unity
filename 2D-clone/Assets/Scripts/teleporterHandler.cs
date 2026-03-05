@@ -1,37 +1,44 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 
-public class TeleporterHandler : MonoBehaviour
+public class teleporterHandler : MonoBehaviour
 {
-    [SerializeField] private List<interruptor> plaque;
-    [SerializeField] private SpriteRenderer door;
-    private bool isActived = false;
+    [SerializeField] private int requiredSwitches = 1;
 
-    void FixedUpdate()
+    private int currentSwitches = 0;
+
+    public void ActivateSwitch()
     {
-        bool allActivated = plaque.All(p => p.requierement);
+        currentSwitches++;
 
-        if (allActivated && isActived == false)
+        CheckDoor();
+    }
+
+    public void DeactivateSwitch()
+    {
+        currentSwitches--;
+
+        CheckDoor();
+    }
+
+    private void CheckDoor()
+    {
+        if (currentSwitches >= requiredSwitches)
         {
-            isActived = true;
-            door.enabled = true;
+            OpenDoor();
+        }
+        else
+        {
+            CloseDoor();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void OpenDoor()
     {
-        if (collider.CompareTag("Player") && isActived == true)
-        {
-            StartCoroutine(Exit());  
-        }
+        gameObject.SetActive(false);
     }
 
-    private IEnumerator Exit()
+    void CloseDoor()
     {
-        yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameObject.SetActive(true);
     }
 }
