@@ -4,7 +4,7 @@ namespace utils
 {
     public abstract class InterruptorController : MonoBehaviour
     {
-        [SerializeField] protected teleporterHandler door;
+        [SerializeField] protected ActiveTeleporterHandler door;
         [SerializeField] protected bool used;
 
         [SerializeField] protected Sprite pressedSprite;
