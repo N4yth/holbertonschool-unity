@@ -15,6 +15,6 @@ public class ActiveTeleporterHandler : MonoBehaviour
     private IEnumerator Exit()
     {
         yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

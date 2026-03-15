@@ -46,19 +46,5 @@ namespace utils
         {
             door.SetActive(false);
         }
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.CompareTag("Player"))
-            {
-                StartCoroutine(Exit());
-            }
-        }
-
-        private IEnumerator Exit()
-        {
-            yield return new WaitForSeconds(0.1f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 }
