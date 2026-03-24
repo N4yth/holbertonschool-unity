@@ -6669,18 +6669,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5865345651523905023, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1dffbf3bdf42f6b4aab7cdd856ac03ab, type: 2}
-    - target: {fileID: 5865345651523905023, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_AnimatePhysics
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5865345651523905023, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_WarningMessage
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5938627216134758028, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6720,6 +6708,10 @@ PrefabInstance:
     - target: {fileID: 5938627216134758028, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220119758098927773, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+      propertyPath: m_Center.y
+      value: -0.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
