@@ -443,6 +443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallFlatB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3eaddab5b18055943a5e43b8fd4d6561, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -659,6 +663,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e73f9df52fac46549b2bf3409a9b7dc7, type: 3}
       propertyPath: m_Name
       value: rock_smallH
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e73f9df52fac46549b2bf3409a9b7dc7, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1063,6 +1071,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 258c8f22e40fde54fab1e7a0b257672b, type: 3}
       propertyPath: m_Name
       value: stone_largeE
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 258c8f22e40fde54fab1e7a0b257672b, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1543,6 +1555,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 258c8f22e40fde54fab1e7a0b257672b, type: 3}
       propertyPath: m_Name
       value: stone_largeE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 258c8f22e40fde54fab1e7a0b257672b, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2311,6 +2327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_largeD
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f66345d8d11a2b84284be43c8463e0bb, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2796,6 +2816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_largeD (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f66345d8d11a2b84284be43c8463e0bb, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2899,6 +2923,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e73f9df52fac46549b2bf3409a9b7dc7, type: 3}
       propertyPath: m_Name
       value: rock_smallH (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e73f9df52fac46549b2bf3409a9b7dc7, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3146,6 +3174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeC (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c46d8be8818d8d4ebb392f919af6da3, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3249,6 +3281,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: afdb76fa4b2f8f34abe3ca41a1f991c4, type: 3}
       propertyPath: m_Name
       value: rock_smallG
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: afdb76fa4b2f8f34abe3ca41a1f991c4, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3697,6 +3733,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3c46d8be8818d8d4ebb392f919af6da3, type: 3}
       propertyPath: m_Name
       value: rock_largeC
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c46d8be8818d8d4ebb392f919af6da3, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4583,6 +4623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeE
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91b709fc308bf284c932c1c1393baae1, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5146,6 +5190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallH
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e73f9df52fac46549b2bf3409a9b7dc7, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5564,6 +5612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_smallG
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f94e1258685b0c94c970f2839a58003d, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5823,6 +5875,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8148c9ec6a24d4a42963e19e9c6484c8, type: 3}
       propertyPath: m_Name
       value: stone_largeA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8148c9ec6a24d4a42963e19e9c6484c8, type: 3}
+      propertyPath: m_TagString
+      value: Plateform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6661,6 +6717,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 452337949896444991, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6864232383767241704}
     - target: {fileID: 631121076694823957, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: TimerText
       value: 
@@ -6668,6 +6728,10 @@ PrefabInstance:
     - target: {fileID: 3235247269319347533, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865345651523905023, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5938627216134758028, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6718,6 +6782,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+--- !u!95 &6864232383767241704 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5865345651523905023, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+  m_PrefabInstance: {fileID: 6864232383767241703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7093964340981384582
 PrefabInstance:
   m_ObjectHideFlags: 0

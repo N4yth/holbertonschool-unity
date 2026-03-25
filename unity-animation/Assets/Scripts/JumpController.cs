@@ -7,6 +7,7 @@ public class JumpController : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         isGrounded = true;
+
     }
 
     void OnTriggerExit(Collider collider)

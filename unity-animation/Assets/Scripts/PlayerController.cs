@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public JumpController Jump;
 
+    private Quaternion targetRotation;
+
+    [SerializeField] private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,10 +35,12 @@ public class PlayerController : MonoBehaviour
         camRight.Normalize();
 
         Vector3 move = (camForward * v + camRight * h) * speed * Time.deltaTime;
+
+        Vector3 inputDir = camForward * v + camRight * h;
+        bool isMoving = inputDir != Vector3.zero;
+        animator.SetBool("isRunning", isMoving);  
         
         transform.Translate(move, Space.World);
-
-        
 
         if (move != Vector3.zero)
         {
@@ -45,7 +51,6 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space) && Jump.isGrounded){
             rb.AddForce(new Vector3(0.0f, jumphigh, 0.0f) * jumpForce, ForceMode.Impulse);
-            Jump.isGrounded = false;
         }
 
         if (FallingLimit())
