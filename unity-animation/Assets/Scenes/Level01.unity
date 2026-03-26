@@ -5202,6 +5202,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2040713143}
   m_SourcePrefab: {fileID: 100100000, guid: e73f9df52fac46549b2bf3409a9b7dc7, type: 3}
+--- !u!1 &1612641925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 922702132148921663, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+  m_PrefabInstance: {fileID: 6864232383767241703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1621137812
 GameObject:
   m_ObjectHideFlags: 0
@@ -6729,6 +6734,10 @@ PrefabInstance:
       propertyPath: fallDelay
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 452337949896444991, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+      propertyPath: PlayerCharacter
+      value: 
+      objectReference: {fileID: 1612641925}
     - target: {fileID: 631121076694823957, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: TimerText
       value: 

@@ -59,7 +59,9 @@ public class PlayerController : MonoBehaviour
         {
             fallTimer += Time.deltaTime;
             if (fallTimer >= fallDelay)
+            {
                 animator.SetBool("isFalling", true);
+            }
         }
         else
         {
