@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private float jumphigh = 3f;
+    [SerializeField] private float fallDelay = 0.2f;
 
+    private float fallTimer = 0f;
     private Rigidbody rb;
     public JumpController Jump;
 
@@ -53,18 +55,25 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector3(0.0f, jumphigh, 0.0f) * jumpForce, ForceMode.Impulse);
         }
 
-        if (FallingLimit())
+        if (rb.linearVelocity.y < -0.1f && !Jump.isGrounded)
         {
-            transform.position = new Vector3(0, 40f, 0);
+            fallTimer += Time.deltaTime;
+            if (fallTimer >= fallDelay)
+                animator.SetBool("isFalling", true);
         }
+        else
+        {
+            fallTimer = 0f;
+            animator.SetBool("isFalling", false);
+        }
+        FallingLimit();
     }
 
-    public bool FallingLimit()
+    public void FallingLimit()
     {
         if (rb.position.y < -25)
         {
-            return true;
+            transform.position = new Vector3(0, 40f, 0);
         }
-        return false;
     }
 }

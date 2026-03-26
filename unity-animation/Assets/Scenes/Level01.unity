@@ -6725,6 +6725,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 6864232383767241704}
+    - target: {fileID: 452337949896444991, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+      propertyPath: fallDelay
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 631121076694823957, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: TimerText
       value: 
