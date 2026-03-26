@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumphigh = 3f;
     [SerializeField] private float fallDelay = 0.2f;
 
+    private bool falling = false;
     private float fallTimer = 0f;
     private Rigidbody rb;
     public JumpController Jump;
@@ -24,35 +25,38 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        Vector3 camForward = Camera.main.transform.forward;
-        Vector3 camRight = Camera.main.transform.right;
-
-        camForward.y = 0f;
-        camRight.y = 0f;
-
-        camForward.Normalize();
-        camRight.Normalize();
-
-        Vector3 move = (camForward * v + camRight * h) * speed * Time.deltaTime;
-
-        Vector3 inputDir = camForward * v + camRight * h;
-        bool isMoving = inputDir != Vector3.zero;
-        animator.SetBool("isRunning", isMoving);  
-        
-        transform.Translate(move, Space.World);
-
-        if (move != Vector3.zero)
+        if (!falling)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(move);
-            targetRotation *= Quaternion.Euler(0, -90f, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
-        }
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
 
-        if(Input.GetKeyDown(KeyCode.Space) && Jump.isGrounded){
-            rb.AddForce(new Vector3(0.0f, jumphigh, 0.0f) * jumpForce, ForceMode.Impulse);
+            Vector3 camForward = Camera.main.transform.forward;
+            Vector3 camRight = Camera.main.transform.right;
+
+            camForward.y = 0f;
+            camRight.y = 0f;
+
+            camForward.Normalize();
+            camRight.Normalize();
+
+            Vector3 move = (camForward * v + camRight * h) * speed * Time.deltaTime;
+
+            Vector3 inputDir = camForward * v + camRight * h;
+            bool isMoving = inputDir != Vector3.zero;
+            animator.SetBool("isRunning", isMoving);  
+        
+            transform.Translate(move, Space.World);
+
+            if (move != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(move);
+                targetRotation *= Quaternion.Euler(0, -90f, 0);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+            }
+
+            if(Input.GetKeyDown(KeyCode.Space) && Jump.isGrounded){
+                rb.AddForce(new Vector3(0.0f, jumphigh, 0.0f) * jumpForce, ForceMode.Impulse);
+            }
         }
 
         if (rb.linearVelocity.y < -0.1f && !Jump.isGrounded)
@@ -60,11 +64,13 @@ public class PlayerController : MonoBehaviour
             fallTimer += Time.deltaTime;
             if (fallTimer >= fallDelay)
             {
+                falling = true;
                 animator.SetBool("isFalling", true);
             }
         }
         else
         {
+            falling = false;
             fallTimer = 0f;
             animator.SetBool("isFalling", false);
         }
