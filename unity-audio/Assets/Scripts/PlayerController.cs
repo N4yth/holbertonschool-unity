@@ -7,8 +7,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private float jumphigh = 3f;
     [SerializeField] private float fallDelay = 0.2f;
+    [SerializeField] private AudioSource runGrass;
+    [SerializeField] private AudioSource runRock;
 
     private bool falling = false;
+    
     private float fallTimer = 0f;
     private Rigidbody rb;
     public JumpController Jump;
@@ -44,6 +47,31 @@ public class PlayerController : MonoBehaviour
             Vector3 inputDir = camForward * v + camRight * h;
             bool isMoving = inputDir != Vector3.zero;
             animator.SetBool("isRunning", isMoving);  
+
+            if (isMoving && Jump.isGrounded)
+            {
+                if (Jump.onGrass)
+                {
+                    if (!runGrass.isPlaying)
+                    {
+                        runGrass.Play();
+                    }
+                    runRock.Stop();
+                }
+                else if (Jump.onRock)
+                {
+                    if (!runRock.isPlaying)
+                    {
+                        runRock.Play();
+                    }
+                    runGrass.Stop();
+                }
+            }
+            else
+            {
+                runGrass.Stop();
+                runRock.Stop();
+            }
         
             transform.Translate(move, Space.World);
 
@@ -57,6 +85,7 @@ public class PlayerController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space) && Jump.isGrounded){
                 rb.AddForce(new Vector3(0.0f, jumphigh, 0.0f) * jumpForce, ForceMode.Impulse);
             }
+
         }
 
         if (rb.linearVelocity.y < -0.1f && !Jump.isGrounded)
@@ -76,6 +105,7 @@ public class PlayerController : MonoBehaviour
         }
         FallingLimit();
     }
+
 
     public void FallingLimit()
     {

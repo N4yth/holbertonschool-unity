@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Plateform
+  - Rock Plateform
+  - Grass Plateform
   layers:
   - Default
   - TransparentFX
