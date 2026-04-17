@@ -8835,6 +8835,14 @@ PrefabInstance:
       propertyPath: PlayerScript
       value: 
       objectReference: {fileID: 389378889}
+    - target: {fileID: 5303330277999778366, guid: 7261c6b0736f4f8458bf9f5918d784e6, type: 3}
+      propertyPath: normalSnapshot
+      value: 
+      objectReference: {fileID: 24500006, guid: de41efe896aac1640baf0b5f536fa800, type: 2}
+    - target: {fileID: 5303330277999778366, guid: 7261c6b0736f4f8458bf9f5918d784e6, type: 3}
+      propertyPath: pausedSnapshot
+      value: 
+      objectReference: {fileID: -6623795394477056171, guid: de41efe896aac1640baf0b5f536fa800, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

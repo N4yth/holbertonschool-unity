@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     public Button OptionsButton;
     
+
+    public AudioMixerSnapshot normalSnapshot;
+    public AudioMixerSnapshot pausedSnapshot;
+
     void Start()
     {
         ResumeButton.onClick.AddListener(Resume);
@@ -45,13 +50,15 @@ public class PauseMenu : MonoBehaviour
         OptionsButton.onClick.AddListener(Options);
     }
 
-    void Update()
+    void Update() 
     {
         if (Input.GetKeyDown(KeyCode.Escape) && PauseCanvas.activeInHierarchy == true) {
+            normalSnapshot.TransitionTo(0.5f);
             Resume();
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && PauseCanvas.activeInHierarchy == false)
         {
+            pausedSnapshot.TransitionTo(0.5f);
             Pause();
         }
     }
