@@ -12,8 +12,10 @@ public class OptionsMenu  : MonoBehaviour
     public Button ApplyButton;
     public bool isInvert;
     public Toggle toggleButton;
-    private float oldvalue;
+    private float oldValueBGM;
+    private float oldvalueSFX;
     [SerializeField] private Slider bgmSlider;
+    [SerializeField] private Slider sfxSlider;
     [SerializeField] private AudioMixer mixer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,18 +29,23 @@ public class OptionsMenu  : MonoBehaviour
         BackButton.onClick.AddListener(Back);
         ApplyButton.onClick.AddListener(Apply);
 
-        float savedVolume = PlayerPrefs.GetFloat("BGMVolume", 1f);
-        bgmSlider.value = savedVolume;
-        oldvalue = savedVolume;
-        
+        float savedVolumeBGM = PlayerPrefs.GetFloat("BGMVolume", 1f);
+        bgmSlider.value = savedVolumeBGM;
+        oldValueBGM = savedVolumeBGM;
 
-        bgmSlider.onValueChanged.AddListener(SetVolume);
+        float savedVolumeSFX = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        sfxSlider.value = savedVolumeSFX;
+        oldvalueSFX = savedVolumeSFX;
+        
+        sfxSlider.onValueChanged.AddListener(SetVolumeSFX);
+        bgmSlider.onValueChanged.AddListener(SetVolumeBGM);
     }   
 
     public void Back()
     {
         SceneManager.LoadScene(sceneBuildIndex: PlayerPrefs.GetInt("PreviouScene"));
-        bgmSlider.value = oldvalue;
+        bgmSlider.value = oldValueBGM;
+        sfxSlider.value = oldvalueSFX;
     }
 
     public void Apply()
@@ -47,15 +54,26 @@ public class OptionsMenu  : MonoBehaviour
             PlayerPrefs.SetInt("isInvert", 1);
         else
             PlayerPrefs.SetInt("isInvert", 0);
-        oldvalue = bgmSlider.value;
+        oldValueBGM = bgmSlider.value;
+        oldvalueSFX = sfxSlider.value;
         Back();
     }
 
-    public void SetVolume(float value)
+    public void SetVolumeBGM(float value)
     {
+        value = Mathf.Clamp(value, 0.0001f, 1f);
         float volume = Mathf.Log10(value) * 20;
         mixer.SetFloat("BGMVolume", volume);
 
         PlayerPrefs.SetFloat("BGMVolume", value);
+    }
+
+    public void SetVolumeSFX(float value)
+    {
+        value = Mathf.Clamp(value, 0.0001f, 1f);
+        float volume = Mathf.Log10(value) * 20;
+        mixer.SetFloat("SFXVolume", volume);
+
+        PlayerPrefs.SetFloat("SFXVolume", value);
     }
 }

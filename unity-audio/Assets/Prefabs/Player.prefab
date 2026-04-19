@@ -69,7 +69,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JumpController
   isGrounded: 1
+  onGrass: 0
+  onRock: 0
   animator: {fileID: 5865345651523905023}
+  fallGrass: {fileID: 0}
+  fallRock: {fileID: 0}
 --- !u!1 &3235247269319347533
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +89,6 @@ GameObject:
   - component: {fileID: 452337949896444991}
   - component: {fileID: 3570507625916043689}
   - component: {fileID: 631121076694823957}
-  - component: {fileID: 6086743226604457893}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -187,9 +190,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.75
+  m_Height: 1.9
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.09, y: 0.03, z: 0}
 --- !u!114 &452337949896444991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +209,8 @@ MonoBehaviour:
   jumpForce: 3
   jumphigh: 3
   fallDelay: 1.5
+  runGrass: {fileID: 0}
+  runRock: {fileID: 0}
   Jump: {fileID: 1285077133333747020}
   animator: {fileID: 5865345651523905023}
 --- !u!54 &3570507625916043689
@@ -248,29 +253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   TimerText: {fileID: 0}
---- !u!136 &6086743226604457893
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3235247269319347533}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4346793327745134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -329,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1dffbf3bdf42f6b4aab7cdd856ac03ab, type: 2}
     - target: {fileID: 5866666021909216657, guid: 30cdfa8fc04f60b47ae87083698b5864, type: 3}
       propertyPath: m_AnimatePhysics
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 30cdfa8fc04f60b47ae87083698b5864, type: 3}
       propertyPath: m_ApplyRootMotion

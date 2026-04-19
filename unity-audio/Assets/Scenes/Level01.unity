@@ -8835,14 +8835,6 @@ PrefabInstance:
       propertyPath: PlayerScript
       value: 
       objectReference: {fileID: 389378889}
-    - target: {fileID: 5303330277999778366, guid: 7261c6b0736f4f8458bf9f5918d784e6, type: 3}
-      propertyPath: normalSnapshot
-      value: 
-      objectReference: {fileID: 24500006, guid: de41efe896aac1640baf0b5f536fa800, type: 2}
-    - target: {fileID: 5303330277999778366, guid: 7261c6b0736f4f8458bf9f5918d784e6, type: 3}
-      propertyPath: pausedSnapshot
-      value: 
-      objectReference: {fileID: -6623795394477056171, guid: de41efe896aac1640baf0b5f536fa800, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8879,34 +8871,6 @@ PrefabInstance:
     - target: {fileID: 3235247269319347533, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570507625916043689, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570507625916043689, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3954122593713261988, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_Height
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3954122593713261988, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_Center.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 3954122593713261988, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_Center.y
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 3954122593713261988, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5865345651523905023, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
-      propertyPath: m_AnimatePhysics
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5938627216134758028, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8948,8 +8912,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6086743226604457893, guid: 4386530e860b25d4d9363571c9bc326d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8962,17 +8925,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1044923800243536911, guid: debfb2136b5c0974f958d436d9d5ee7e, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 1201494506329259912, guid: debfb2136b5c0974f958d436d9d5ee7e, type: 3}
       propertyPath: m_Name
       value: TimerCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1201494506329259912, guid: debfb2136b5c0974f958d436d9d5ee7e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3839134325062757512, guid: debfb2136b5c0974f958d436d9d5ee7e, type: 3}
       propertyPath: m_Pivot.x
@@ -9054,10 +9009,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5466541671494350410, guid: debfb2136b5c0974f958d436d9d5ee7e, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 0f4e8c6ba9a6c184583c6c3819f6a59c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

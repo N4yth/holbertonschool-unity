@@ -20,11 +20,7 @@ public class WinTrigger : MonoBehaviour
     [SerializeField]
     public PauseMenu PauseScript;
 
-    [Tooltip("SFX to shut")]
-    [SerializeField]
-    public GameObject SFX;
-
-    [Tooltip("SFX to shut")]
+    [Tooltip("animation to stop")]
     [SerializeField]
     private Animator animator;
 

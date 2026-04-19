@@ -53,6 +53,8 @@ MonoBehaviour:
   RestartButton: {fileID: 7727920853127648581}
   MenuButton: {fileID: 6156001537426656930}
   OptionsButton: {fileID: 6812763360789530567}
+  normalSnapshot: {fileID: 24500006, guid: de41efe896aac1640baf0b5f536fa800, type: 2}
+  pausedSnapshot: {fileID: -6623795394477056171, guid: de41efe896aac1640baf0b5f536fa800, type: 2}
 --- !u!1001 &7712136962357656515
 PrefabInstance:
   m_ObjectHideFlags: 0
